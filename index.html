@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Body Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+        integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <div style="position: relative; width: 400px; height: 600px;">
+            <img src="human.jpg" style="width: 450px; height: 600px;" alt="Body Image">
+            <!-- Points -->
+            <div id="point1" class="point blue" style="top: 41px; left: 215px;" onclick="selectPoint('point1')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point2" class="point blue" style="top: 68px; left: 204px;" onclick="selectPoint('point2')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point3" class="point blue" style="top: 100px; left: 204px;" onclick="selectPoint('point3')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point4" class="point blue" style="top: 137px; left: 225px;" onclick="selectPoint('point4')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point5" class="point blue" style="top: 210px; left: 134px;" onclick="selectPoint('point5')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point6" class="point blue" style="top: 211px; left: 227px;" onclick="selectPoint('point6')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point7" class="point blue" style="top: 285px; left: 292px;" onclick="selectPoint('point7')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point8" class="point blue" style="top: 400px; left: 180px;" onclick="selectPoint('point8')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point9" class="point blue" style="top: 365px; left: 180px;" onclick="selectPoint('point9')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point10" class="point blue" style="top: 330px; left: 180px;" onclick="selectPoint('point10')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point11" class="point blue" style="top: 350px; left: 250px;" onclick="selectPoint('point11')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+            <div id="point12" class="point blue" style="top: 520px; left: 230px;" onclick="selectPoint('point12')"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+        </div>
+
+        <div class="d-none d-md-block  " id="pointNames">
+            <!-- Point Names -->
+            <div class="m-5 p-5">
+
+                <div class="mb-3 ps-2" id="pointName1">Retina</div>
+                <div class="mb-3 ps-2" id="pointName2">Teeth</div>
+                <div class="mb-3 ps-2" id="pointName3">Thyroid</div>
+                <div class="mb-3 ps-2" id="pointName4">Heart</div>
+                <div class="mb-3 ps-2" id="pointName5">Blood Vessels</div>
+                <div class="mb-3 ps-2" id="pointName6">Kidneys</div>
+            </div>
+            <div class="m-5 p-5">
+                <div class="mb-3 ps-2" id="pointName7">Skin</div>
+                <div class="mb-3 ps-2" id="pointName8">Joints</div>
+                <div class="mb-3 ps-2" id="pointName9">Bones</div>
+                <div class="mb-3 ps-2" id="pointName10">Bone Marrow</div>
+                <div class="mb-3 ps-2" id="pointName11">Muscles</div>
+                <div class="mb-3 ps-2" id="pointName12">Peripheral Nerves</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- content here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.point {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.blue {
+  background-color: #1f99d5;
+  box-shadow: 0 0 0 4px transparent;
+}
+.red {
+  background-color: #d0191f;
+  box-shadow: 0 0 0 7px white, 0 0 0px 8px #d0191f;
+}
+#pointNames {
+  display: flex !important;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #1f99d5;
+  font-size: larger;
+}
+@media (min-width: 768px) {
+  .modal,
+  .modal-backdrop {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  #pointNames {
+    display: none !important;
+  }
+}
