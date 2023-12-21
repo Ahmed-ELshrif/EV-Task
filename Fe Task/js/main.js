@@ -46,7 +46,7 @@ function deselectCurrentPoint() {
       "pointNames" + getPointNumber(selectedPoint.id)
     );
     lastSelectedPointName.style.color = "";
-    lastSelectedPointName.style.borderTop = ""; // Remove the red border
+    lastSelectedPointName.style.borderTop = "";
   }
 }
 
@@ -75,10 +75,10 @@ var scrollorama = $.scrollorama({
 scrollorama
             .animate('#shard-1', {
                 delay: 0,
-                duration: 600,
+                duration: 800,
                 property: 'top',
                 start: 200,
-                end: 0
+                end: 800
             })
             .animate('#shard-2', {
                 delay: 0,
