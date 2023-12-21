@@ -4,12 +4,21 @@
 <head>
     <title>Interactive Body Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
 
+	<script src="js/jquery-1.9.1.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/slick-theme.css">
+     <!-- <script src="js/slick.js"></script> -->
+     <script src="js/slick.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
         integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -23,79 +32,186 @@
 </head>
 
 <body>
+     <div class="scrollblock" id="shards-container" style="z-index: -100;">
+          <img alt="" id="shard-1" src="images/images-shard-1.png" />
+          <img alt="" id="shard-2" src="images/images-shard-2.png" />
+          <img alt="" id="shard-3" src="images/images-shard-3.png" />
+          <img alt="" id="shard-4" src="images/images-shard-4.png" />
+          <img alt="" id="shard-5" src="images/images-shard-5.png" />
+          <img alt="" id="shard-6" src="images/images-shard-6.png" />
+          <img alt="" id="shard-7" src="images/images-shard-7.png" />
+          <img alt="" id="shard-8" src="images/images-shard-8.png" />
+          <img alt="" id="shard-9" src="images/images-shard-9.png" />
+          <img
+            alt=""
+            id="shard-10"
+            src="images/images-shard-10.png"
+          />
+          <img
+            alt=""
+            id="shard-11"
+            src="images/images-shard-11.png"
+          />
+          <img
+            alt=""
+            id="shard-12"
+            src="images/images-shard-12.png"
+          />
+          <img
+            alt=""
+            id="shard-13"
+            src="images/images-shard-13.png"
+          />
+          <img
+            alt=""
+            id="shard-14"
+            src="images/images-shard-14.png"
+          />
+          <img
+            alt=""
+            id="shard-15"
+            src="images/images-shard-15.png"
+          />
+          <img
+            alt=""
+            id="shard-16"
+            src="images/images-shard-16.png"
+          />
+          <img alt="" id="shard-17" src="images/images-shard-1.png" />
+          <img alt="" id="shard-18" src="images/images-shard-2.png" />
+          <img alt="" id="shard-19" src="images/images-shard-3.png" />
+          <img alt="" id="shard-20" src="images/images-shard-4.png" />
+          <img alt="" id="shard-21" src="images/images-shard-5.png" />
+        </div>
+     <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">hero for scrolling</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+            </div>
+          </div>
+        </div>
+        
     <div class="d-flex">
-        <div style="position: relative; width: 400px; height: 600px;">
-            <img src="human.jpg" style="width: 450px; height: 600px;" alt="Body Image">
+        <div id="shape" style="position: relative; width: 400px; height: 600px; margin: auto;">
+            <img src="human.jpg" id="human" style="width: 450px; height: 600px; " alt="Body Image">
             <!-- Points -->
             <div id="point1" class="point blue" style="top: 41px; left: 215px;" onclick="selectPoint('point1')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point2" class="point blue" style="top: 68px; left: 204px;" onclick="selectPoint('point2')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point3" class="point blue" style="top: 100px; left: 204px;" onclick="selectPoint('point3')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point4" class="point blue" style="top: 137px; left: 225px;" onclick="selectPoint('point4')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point5" class="point blue" style="top: 210px; left: 134px;" onclick="selectPoint('point5')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point6" class="point blue" style="top: 211px; left: 227px;" onclick="selectPoint('point6')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point7" class="point blue" style="top: 285px; left: 292px;" onclick="selectPoint('point7')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point8" class="point blue" style="top: 400px; left: 180px;" onclick="selectPoint('point8')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point9" class="point blue" style="top: 365px; left: 180px;" onclick="selectPoint('point9')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point10" class="point blue" style="top: 330px; left: 180px;" onclick="selectPoint('point10')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point11" class="point blue" style="top: 350px; left: 250px;" onclick="selectPoint('point11')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
             <div id="point12" class="point blue" style="top: 520px; left: 230px;" onclick="selectPoint('point12')"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></div>
+                 ></div>
+
         </div>
 
-        <div class="d-none d-md-block  " id="pointNames">
+        <div class="  " id="pointNames">
             <!-- Point Names -->
             <div class="m-5 p-5">
 
-                <div class="mb-3 ps-2" id="pointName1">Retina</div>
-                <div class="mb-3 ps-2" id="pointName2">Teeth</div>
-                <div class="mb-3 ps-2" id="pointName3">Thyroid</div>
-                <div class="mb-3 ps-2" id="pointName4">Heart</div>
-                <div class="mb-3 ps-2" id="pointName5">Blood Vessels</div>
-                <div class="mb-3 ps-2" id="pointName6">Kidneys</div>
+                <div class="mb-3 ps-2" id="pointName1" onclick="selectPointByName('point1')">Retina</div>
+                <div class="mb-3 ps-2" id="pointName2" onclick="selectPointByName('point2')">Teeth</div>
+                <div class="mb-3 ps-2" id="pointName3" onclick="selectPointByName('point3')">Thyroid</div>
+                <div class="mb-3 ps-2" id="pointName4" onclick="selectPointByName('point4')">Heart</div>
+                <div class="mb-3 ps-2" id="pointName5" onclick="selectPointByName('point5')">Blood Vessels</div>
+                <div class="mb-3 ps-2" id="pointName6" onclick="selectPointByName('point6')">Kidneys</div>
+                
             </div>
             <div class="m-5 p-5">
-                <div class="mb-3 ps-2" id="pointName7">Skin</div>
-                <div class="mb-3 ps-2" id="pointName8">Joints</div>
-                <div class="mb-3 ps-2" id="pointName9">Bones</div>
-                <div class="mb-3 ps-2" id="pointName10">Bone Marrow</div>
-                <div class="mb-3 ps-2" id="pointName11">Muscles</div>
-                <div class="mb-3 ps-2" id="pointName12">Peripheral Nerves</div>
+
+                
+                <div class="mb-3 ps-2" id="pointName7" onclick="selectPointByName('point7')">Skin</div>
+                <div class="mb-3 ps-2" id="pointName8" onclick="selectPointByName('point8')">Joints</div>
+                <div class="mb-3 ps-2" id="pointName9" onclick="selectPointByName('point9')">Bones</div>
+                <div class="mb-3 ps-2" id="pointName10" onclick="selectPointByName('point10')">Bone Marrow</div>
+                <div class="mb-3 ps-2" id="pointName11" onclick="selectPointByName('point11')">Muscles</div>
+                <div class="mb-3 ps-2" id="pointName12" onclick="selectPointByName('point12')">Peripheral Nerves</div>
+                
             </div>
+            
         </div>
 
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- content here -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="mainSlider">
+          <div class="container">
+               <div class="slickSlider" id="pointNamesMobile">
+            <div class="mb-3 ps-2 item" id="pointNames1" onclick="selectPointByName('point1')">Retina</div>
+            <div class="mb-3 ps-2 item" id="pointNames2" onclick="selectPointByName('point2')">Teeth</div>
+            <div class="mb-3 ps-2 item" id="pointNames3" onclick="selectPointByName('point3')">Thyroid</div>
+            <div class="mb-3 ps-2 item" id="pointNames4" onclick="selectPointByName('point4')">Heart</div>
+            <div class="mb-3 ps-2 item" id="pointNames5" onclick="selectPointByName('point5')">Blood Vessels</div>
+            <div class="mb-3 ps-2 item" id="pointNames6" onclick="selectPointByName('point6')">Kidneys</div>
+            <div class="mb-3 ps-2 item" id="pointNames7" onclick="selectPointByName('point7')">Skin</div>
+            <div class="mb-3 ps-2 item" id="pointNames8" onclick="selectPointByName('point8')">Joints</div>
+            <div class="mb-3 ps-2 item" id="pointNames9" onclick="selectPointByName('point9')">Bones</div>
+            <div class="mb-3 ps-2 item" id="pointNames10" onclick="selectPointByName('point10')">Bone Marrow</div>
+            <div class="mb-3 ps-2 item" id="pointNames11" onclick="selectPointByName('point11')">Muscles</div>
+            <div class="mb-3 ps-2 item" id="pointNames12" onclick="selectPointByName('point12')">Peripheral Nerves</div>
+            
+                    
+               </div>
+          </div>
+     </div>
+    <!-- <div class="d-flex " id="pointNamesMobile" >
+      
+
+            <div class="mb-3 ps-2" id="pointNames1" onclick="selectPointByName('point1')">Retina</div>
+            <div class="mb-3 ps-2" id="pointNames2" onclick="selectPointByName('point2')">Teeth</div>
+            <div class="mb-3 ps-2" id="pointNames3" onclick="selectPointByName('point3')">Thyroid</div>
+            <div class="mb-3 ps-2" id="pointNames4" onclick="selectPointByName('point4')">Heart</div>
+            <div class="mb-3 ps-2" id="pointNames5" onclick="selectPointByName('point5')">Blood Vessels</div>
+            <div class="mb-3 ps-2" id="pointNames6" onclick="selectPointByName('point6')">Kidneys</div>
+            <div class="mb-3 ps-2" id="pointNames7" onclick="selectPointByName('point7')">Skin</div>
+            <div class="mb-3 ps-2" id="pointNames8" onclick="selectPointByName('point8')">Joints</div>
+            <div class="mb-3 ps-2" id="pointNames9" onclick="selectPointByName('point9')">Bones</div>
+            <div class="mb-3 ps-2" id="pointNames10" onclick="selectPointByName('point10')">Bone Marrow</div>
+            <div class="mb-3 ps-2" id="pointNames11" onclick="selectPointByName('point11')">Muscles</div>
+            <div class="mb-3 ps-2" id="pointNames12" onclick="selectPointByName('point12')">Peripheral Nerves</div>
+            
+      
+        
+    </div> -->
 
 
-    <script src="main.js"></script>
+
+
+   
+
+
+    <script src="js/main.js"></script>
+    <script>
+     $(document).ready(function(){
+
+$('.slickSlider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});});
+</script>
+    
 </body>
 
 </html>

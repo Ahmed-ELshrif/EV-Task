@@ -1,0 +1,73 @@
+.point {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.blue {
+  background-color: #1f99d5;
+  box-shadow: 0 0 0 4px transparent;
+}
+.red {
+  background-color: #d0191f;
+  box-shadow: 0 0 0 7px white, 0 0 0px 8px #d0191f;
+  animation: a 1.6s linear infinite;
+  z-index: 2;
+}
+
+@keyframes a {
+  0% {box-shadow: 0 0 0 9px white, 0 0 0px 9px #d0191f;}
+  50% {box-shadow: 0 0 0 7px white, 0 0 0px 9px #d0191f;}
+  100% {box-shadow: 0 0 0 4px white, 0 0 0px 9px #d0191f;}
+}
+#pointNames {
+  display: flex !important;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #1f99d5;
+  font-size: larger;
+}
+#pointNamesMobile {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #1f99d5;
+  font-size: larger;
+}
+
+@media (max-width: 767px) {
+  #pointNames {
+    display: none !important;
+  }
+  #shards-container{
+    display: none !important;
+
+
+  }
+
+}
+@media (min-width: 768px) {
+  #pointNamesMobile {
+    display: none !important;
+  }
+  .mainSlider{
+    display: none !important;
+
+  }
+}
+.mainSlider{
+
+  height: 120px;
+  background-color: rgba(169, 169, 169, 0.168);
+}
+.slickSlider{
+  width: auto;
+  margin: auto;
+  height: 80px;
+
+}
+.item{
+  margin-bottom: 20px;
+  padding-top: 12px;
+
+  text-align: center;
+}
